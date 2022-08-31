@@ -1,5 +1,4 @@
-// maxElement
-
+// самое большое число в массиве
 const maxElement = (arr) => {
   let max = arr[0];
   for (let i = 0; i < arr.length; i++) { 
@@ -10,8 +9,7 @@ const maxElement = (arr) => {
   return max;
 }
 
-// sum of all elements
-
+// сумма всех элементов массива
 const getTotal = (arr) => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -20,8 +18,7 @@ const getTotal = (arr) => {
   return sum;
 }
 
-// only positive numbers
-
+// только числа больше 0 (позитивные)
 const positiveElements = (arr) => {
   let newArr = [];
   for (let i = 0; i <= arr.length; i++) {
@@ -32,8 +29,19 @@ const positiveElements = (arr) => {
   return newArr;
 }
 
-// string toUpperCase only first letter
-
+// строка с первой заглавной
 const capitalizeFirstWord = (s) => {
   return s.replace(s[0], s[0].toUpperCase());
+}
+
+// извлечение числа из строки (число гарантированно появляется 1 раз)
+const extractNumber = (s) => {
+  let numbers = []
+  s = s.split('');
+  for(let i = 0; i < s.length; i++){
+    if(s[i] >= 0 && s[i] <= 9 || s[i] === '.'){
+      numbers += s[i]
+    }
+  }
+  return parseFloat(numbers)
 }
