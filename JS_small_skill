@@ -45,3 +45,13 @@ const extractNumber = (s) => {
   }
   return parseFloat(numbers)
 }
+
+// разбивает на слова и делает каждое слово с большой буквы
+const capitalizeEachWord = (s) => {
+  let newString = '';
+  s = s.split(' ');
+  for (let i = 0; i < s.length; i++) {
+    newString += s[i].replace(s[i][0], s[i][0].toUpperCase()) + ' ';
+  } 
+  return newString.trimEnd();
+}
