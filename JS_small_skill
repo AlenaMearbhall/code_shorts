@@ -64,3 +64,14 @@ return s.replace(0, n) + '...';
 return s;
 }
 }
+
+// перебор слов в строке словами из массива (анти-спам)
+const checkSpam = (text, spamKeywords) => {
+  let textLow = text.toLowerCase();
+  for (let i = 0; i < spamKeywords.length; i++) {
+    if (textLow.includes(spamKeywords[i])) {
+      return true
+    }
+  }
+  return false;
+}
