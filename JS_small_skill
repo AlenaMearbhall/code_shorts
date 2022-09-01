@@ -55,3 +55,12 @@ const capitalizeEachWord = (s) => {
   } 
   return newString.trimEnd();
 }
+
+// сокращение строки на n и добавление в конце '...'. если строка меньше n - оставить ее как есть
+const shortenByWords = (s, n) => {
+if (s.length > n) {
+return s.replace(0, n) + '...';
+} else {
+return s;
+}
+}
